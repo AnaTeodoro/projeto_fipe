@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<title>Projeto Fipe</title>
+	<link rel="icon" href="img/logo.png.">
+</head>
+
+<body>
+		<div id='wrapper'>
+			<header class="header">
+				<img src="img/logo.png" alt="logo" width="135" height="135">
+				<h1>PROJETO FIPE</h1>
+			</header>
+
+			<nav>
+				<ul class="main_menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="">Favoritos</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="description">
+			<h2>Dados dos Veículos</h2>
+		</div>
+		
+		<section class="new-section" id="painel">
+			<div class="new-wrapper">
+				<div class="container">
+					<div class="action-box">
+						<table class="table1">
+						    <tr>
+						       <th>Valor:</th>
+						       <td>R$ 87.449,00</td>
+						   </tr>
+						   <tr>
+						       <th>Marca:</th>
+						       <td>VW - VolksWagen</td>
+						   </tr>
+						   <tr>
+						       <th>Modelo:</th>
+						       <td>AMAROK High.CD 2.0 16V TDI 4x4 Dies. Aut</td>
+						   </tr>
+						   <tr>
+						       <th>Ano:</th>
+						       <td>2014</td>
+						   </tr>
+						   <tr>
+						       <th>Combustível:</th>
+						       <td>Diesel</td>
+						   </tr>
+						   <tr>
+						       <th>Cód.FIPE:</th>
+						       <td>005340-6</td>
+						   </tr>
+						   <tr>
+						       <th>Mês de Referência:</th>
+						       <td>Setembro de 2020</td>
+						   </tr>
+						   <tr>
+						       <th>Tipo Veículo:</th>
+						       <td>1</td>
+						   </tr>
+						   <tr>
+						       <th>Sigla Combust.:</th>
+						       <td>D</td>
+						   </tr>
+						</table>
+						<div class="fav-btn">
+							<button class="btn">Marcar como Favorito</button>
+						</div>
+					</div>
+					<div class="action-box">
+						<table class="table2">
+						    <tr>
+						       <th>Valor:</th>
+						       <td>R$ 929.772,00</td>
+						   </tr>
+						   <tr>
+						       <th>Marca:</th>
+						       <td>LAMBORGHINI</td>
+						   </tr>
+						   <tr>
+						       <th>Modelo:</th>
+						       <td>Gallardo Spyder LP560-4</td>
+						   </tr>
+						   <tr>
+						       <th>Ano:</th>
+						       <td>2013</td>
+						   </tr>
+						   <tr>
+						       <th>Combustível:</th>
+						       <td>Gasolina</td>
+						   </tr>
+						   <tr>
+						       <th>Cód.FIPE:</th>
+						       <td>078002-2</td>
+						   </tr>
+						   <tr>
+						       <th>Mês de Referência:</th>
+						       <td>Setembro de 2020</td>
+						   </tr>
+						   <tr>
+						       <th>Tipo Veículo:</th>
+						       <td>1</td>
+						   </tr>
+						   <tr>
+						       <th>Sigla Combust.:</th>
+						       <td>G</td>
+						   </tr>
+						</table>
+						<div class="fav-btn">
+							<button class="btn">Marcar como Favorito</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="rodape">
+            <div style='font-size: 10px; color: #FFFFFF; font-weight: bold; height: 20px; line-height: 20px; text-shadow: 1px 1px 1px black;'> © ANA TEODORO 2020
+            </div>
+        </footer>
+
+	
+	<!-- <script>
+			$(document).ready(function(){
+				carregar_json('Marca');
+				function carregar_json(id, marca_id){
+					var html = '';
+
+					$.getJSON('https://parallelum.com.br/fipe/api/v1/carros/marcas', function(data){
+						html += '<option>Selecionar '+ id +'</option>';
+						console.log(data);
+						if(id == 'Marca' && modelo_id == null){
+							for(var i = 0; i < data.marcas.length; i++){
+								html += '<option value='+ data.marcas[i].codigo +'>'+ data.marcas[i].nome+'</option>';
+							}
+						}else{
+							for(var i = 0; i < data.marcas.length; i++){
+								if(data.marcas[i].codigo == modelo_id){
+									for(var j = 0; j < data.marcas[i].modelos.length; j++){
+										html += '<option value='+ data.marcas[i].codigo +'>'+data.marcas[i].modelos[j]+ '</option>';
+									}
+								}
+							}
+						}
+
+						$('#'+id).html(html);
+					});
+					
+				}
+
+				$(document).on('change', '#Marca', function(){
+					var modelo_id = $(this).val();
+					console.log(modelo_id);
+					if(modelo_id != null){
+						carregar_json('Modelo', modelo_id);
+					}
+				});
+
+			});
+		</script> -->
+
+</body>
+
+</html>
